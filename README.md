@@ -48,8 +48,15 @@ node app.js
 
 
 ## Screenshot
-Homepage of the app
+#### Homepage of the app
 ![screenshot](img/home-ss.png)
 
-Twilio Dashboard
+
+#### Twilio Dashboard
 ![dashboard](img/dashboard.png)
+
+
+#### Preview
+<img src="img/mobile-ss.jpeg" width=300 height=550>
+
+
