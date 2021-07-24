@@ -18,12 +18,12 @@ This API was used for sending text message to a phone number. In trail account, 
 
 ## For Running the Project
 
-Download the node modules first
+Download node_modules/ first
 ```
 npm i
 ```
 
-After that, create a ```.env``` file and add your own API key values (from dashboard)
+After that, create a ```.env``` file and add your own API and token values from Twilio's dashboard
 ```
 TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
@@ -31,19 +31,19 @@ TWILIO_FROM_NUM=
 MONGO_ATLAS_PATH=
 ```
 
-If you don't plan on using MongoDB Atlas, for you can mention this as the localhost address
+If you don't plan on using MongoDB Atlas, use the localhost address
 ```
 mongodb://localhost:27017/contactsDB
 ```
 
-After this, simply run the project
-```
-node app.js
-```
-
-if you've nodemon, then
+After this, simply run
 ```
 nodemon app.js
+```
+
+or (in case you don't have nodemon)
+```
+node app.js
 ```
 
 
