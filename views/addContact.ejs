@@ -1,0 +1,26 @@
+<%- include("partials/header"); %> 
+
+    <h1>Add Contact</h1>
+    <form action="/" method="post">
+
+        <div class="form-group">
+            <label for="fName">First Name</label><br>
+            <input class="form-control" type="text" name="fName" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="lName">Last Name</label><br>
+            <input class="form-control" type="text" name="lName" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label><br>
+            <input class="form-control" type="tel" name="phone" required="required" pattern="[0-9]{10}" placeholder="Enter your 10 digit number">
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn compose-btn">Add</button>
+        </div>
+    </form>
+    
+<%- include("partials/footer"); %> 

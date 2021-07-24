@@ -1,0 +1,43 @@
+<%- include("partials/header"); %> 
+
+    <% if(success !== null ){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+    <% } %>
+    
+    <h1>Welcome</h1>
+    <p>
+        This is the homepage of the app. From here using the navbar different functionalities can be accessed. As per the case study,
+        this web-app currently serves the following functionalities. 
+        <ul>
+            <li>Creation of new contact</li>
+            <li>Listing all the available contacts</li>
+            <li>Sending OTP sms to a particular contact</li>
+            <li>Listing logs of all the otps sent</li>
+        </ul>
+
+        This webapp is built using NodeJS as backend, MongoDB for database and BootStrap for styling purpose. 
+    </p>
+
+    <h3>Add Contact</h3>
+    <p>
+        Contacts can be added via form with basic details required like First name, last name and phone number. Client side form validation
+        has also been applied.
+    </p>
+
+    <h3>List all Available Contacts</h3>
+    <p>
+        Based on the contacts that will be added from above menu, a list in the form of table will be shown here in this menu. There will be
+        an expand button option to see the complete contact details currently it's Name and Phone number, but if other details are added that
+        can also be shown in this page.<br><br>
+
+        After this, the user can choose to send an otp (generated randomly) to the particular selected contact and using <strong>Twilio's SMS API</strong> an
+        OTP can be sent to the selected contact in real time.
+    </p>
+
+    <h3>Sent Messages/ Logs</h3>
+    <p>
+        A log is also maintained to keep track of all the OTPs that were sent out along with their timestamps.
+    </p>
+<%- include("partials/footer"); %> 

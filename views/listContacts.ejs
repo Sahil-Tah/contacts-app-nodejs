@@ -1,0 +1,27 @@
+<%- include("partials/header"); %>
+
+    <h1>List of all Contacts</h1>
+
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">More Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% allContacts.forEach(contact=> { %>
+                <tr>
+                    <td><%= contact.fName %></td>
+                    <td><%= contact.lName %></td>
+                    <td>
+                        <p><a href="/info/<%= contact._id %>"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a></p>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+        </tbody>
+    </table>
+
+    <%- include("partials/footer"); %>

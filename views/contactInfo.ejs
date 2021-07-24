@@ -1,0 +1,28 @@
+<%- include("partials/header"); %> 
+
+    <h1>More Details</h1>
+    <br>
+    
+    <table class="table table-bordered table-responsive">
+        <tbody>
+          <tr>
+            <th><h4>First Name:</h4></th>
+            <td><%= contact.fName %></td>
+          </tr>
+          <tr>
+            <th><h4>Last Name:</h4></th>
+            <td><%= contact.lName %></td>
+          </tr>
+          <tr>
+            <th><h4>Phone no:</h4></th>
+            <td><%= contact.phone %></td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+      <form method="get" action="/sendSMS/<%= contact._id %>">
+        <button class="btn compose-btn" type="submit">Send SMS</button>
+    </form>
+    
+<%- include("partials/footer"); %> 

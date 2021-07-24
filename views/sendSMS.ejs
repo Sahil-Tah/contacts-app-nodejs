@@ -1,0 +1,26 @@
+<%- include("partials/header"); %> 
+
+<h1>Send SMS to <%= contact.fName %></h1>
+<form action="/sendSMS" method="post">
+
+    <div class="form-group">
+        <label for="phone">Phone Number</label><br>
+        <input class="form-control"  type="text" name="phone" value="<%= contact.phone %>" readonly>
+    </div>
+    
+    <% let otp = Math.floor(100000 + Math.random() * 900000); %>
+    
+    <div class="form-group">
+        <label for="otpMessage">Message</label>
+        <textarea class="form-control" name="message" rows="3" readonly>Hi. Your OTP is: <%= otp %></textarea>
+      </div>
+    
+    <input class="form-control"  type="hidden" name="otp" value="<%= otp %>" readonly>
+    <input class="form-control"  type="hidden" name="name" value="<%= contact.fName +" "+contact.lName %>" readonly>
+
+    <div>
+        <button type="submit" class="btn compose-btn">Send</button>
+    </div>
+</form>
+    
+<%- include("partials/footer"); %> 
