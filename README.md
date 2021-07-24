@@ -15,5 +15,41 @@ This API was used for sending text message to a phone number. In trail account, 
 * Dotenv
 * Twilio
 
-### Screenshot
-[screenshot](img/home-ss.png)
+
+## For Running the Project
+
+Download the node modules first
+```
+npm i
+```
+
+After that, create a ```.env``` file and add your own API key values (from dashboard)
+```
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_FROM_NUM=
+MONGO_ATLAS_PATH=
+```
+
+If you don't plan on using MongoDB Atlas, for you can mention this as the localhost address
+```
+mongodb://localhost:27017/contactsDB
+```
+
+After this, simply run the project
+```
+node app.js
+```
+
+if you've nodemon, then
+```
+nodemon app.js
+```
+
+
+## Screenshot
+Homepage of the app
+![screenshot](img/home-ss.png)
+
+Twilio Dashboard
+![dashboard](img/dashboard.png)
